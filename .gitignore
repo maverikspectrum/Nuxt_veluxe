@@ -1,0 +1,38 @@
+# Node.js
+/node_modules
+/.nuxt
+/dist
+/.vite
+/.yarn
+/.pnpm
+yarn-error.log
+npm-debug.log
+package-lock.json
+yarn.lock
+
+# Nuxt.js build files
+.nuxt/
+
+# VSCode directory
+.vscode/
+
+# MacOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+
+# Log files
+*.log
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# NPM / Yarn lock files (optional, depending on your setup)
+package-lock.json
+yarn.lock
+
+# Optional: Ignore coverage folder created by testing libraries
+coverage/
