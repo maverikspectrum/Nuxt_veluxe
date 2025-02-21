@@ -1,0 +1,27 @@
+{
+    "name": "@types/file-loader",
+    "version": "5.0.4",
+    "description": "TypeScript definitions for file-loader",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/file-loader",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Gareth Jones",
+            "githubUsername": "g-rath",
+            "url": "https://github.com/g-rath"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/file-loader"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/webpack": "^4"
+    },
+    "typesPublisherContentHash": "3f456e12304e31c582090c0df3bde55bef7664d7f7c84a33263279bd0018040e",
+    "typeScriptVersion": "4.5"
+}

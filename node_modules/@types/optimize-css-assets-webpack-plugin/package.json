@@ -1,0 +1,32 @@
+{
+    "name": "@types/optimize-css-assets-webpack-plugin",
+    "version": "5.0.8",
+    "description": "TypeScript definitions for optimize-css-assets-webpack-plugin",
+    "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/optimize-css-assets-webpack-plugin",
+    "license": "MIT",
+    "contributors": [
+        {
+            "name": "Armando Meziat",
+            "githubUsername": "odnamrataizem",
+            "url": "https://github.com/odnamrataizem"
+        },
+        {
+            "name": "Spencer Miskoviak",
+            "githubUsername": "skovy",
+            "url": "https://github.com/skovy"
+        }
+    ],
+    "main": "",
+    "types": "index.d.ts",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/DefinitelyTyped/DefinitelyTyped.git",
+        "directory": "types/optimize-css-assets-webpack-plugin"
+    },
+    "scripts": {},
+    "dependencies": {
+        "@types/webpack": "^4"
+    },
+    "typesPublisherContentHash": "7a1ba4f5e6b53b00688d824601bc9b49f3d7e5993a38cbb1897570521ee00ace",
+    "typeScriptVersion": "4.5"
+}
