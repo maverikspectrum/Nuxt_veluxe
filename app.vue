@@ -1,12 +1,5 @@
-<script setup>
-useHead({
-  link: [
-    { rel: 'icon', type: 'image/ico', href: '/favicon.ico' } 
-  ],
-  title: 'Projeto Domingao - PFG'
-});
+<script setup lang="ts">
 </script>
-
 
 <template>
   <NuxtLayout />

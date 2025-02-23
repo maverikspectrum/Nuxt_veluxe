@@ -1,5 +1,5 @@
 {
-  "name": "domingao",
+  "name": "veluxe-auto",
   "private": true,
   "type": "module",
   "scripts": {
@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.7.2",
+    "@nuxt/types": "^2.18.1",
     "@nuxtjs/i18n": "^9.2.1",
     "@vueuse/core": "^12.5.0",
+    "nouislider": "^15.8.1",
     "nuxt": "^3.15.1",
     "swiper": "^11.2.0",
     "vue": "latest",
