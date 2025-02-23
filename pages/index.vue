@@ -5,8 +5,7 @@ definePageMeta({
 </script>
 
 <template>
-  <HomeHeroSection />
-  <HomeBrand />
+  <HomeMain/>
 </template>
 
 

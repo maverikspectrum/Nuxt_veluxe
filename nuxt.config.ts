@@ -8,8 +8,7 @@ export default defineNuxtConfig({
     ],
     lazy: true, 
     langDir: 'lang/', 
-    defaultLocale: 'pt', 
-    fallbackLocale: 'pt',
+    defaultLocale: 'pt'
   },
   css: [
     '@/assets/css/tailwind.css',
