@@ -49,15 +49,16 @@ onBeforeUnmount(() => {
                 LOGO
               </NuxtLink>
             </div>
-            <div class="flex justify-center items-center gap-10 font-medium pr-20 text-sm">
+            <div class="flex justify-center items-center gap-10 font-medium pr-20 text-[13px]">
                 <NuxtLink
                 to="/stock" 
+                active-class="border-[#ffbd17] border-t-2"
                 class="flex flex-col justify-center gap-1 items-center hover:text-[#ffbd17] transition duration-300 ease-in-out border-t-2 border-transparent hover:border-[#ffbd17] pt-2">
-                    <i class="fa-solid fa-car-side text-2xl"></i>
+                    <i class="fa-solid fa-car-side text-xl"></i>
                     Stock
                 </NuxtLink>
                 <button class="flex flex-col justify-center gap-1 items-center hover:text-[#ffbd17] transition duration-300 ease-in-out border-t-2 border-transparent hover:border-[#ffbd17] pt-2">
-                    <i class="fa-solid fa-phone text-2xl"></i>
+                    <i class="fa-solid fa-phone text-xl"></i>
                     Contactos
                 </button>
             </div>
@@ -87,7 +88,7 @@ onBeforeUnmount(() => {
 
 .navbar:not(.navbar-scrolled) {
   background-color: rgba(0, 0, 0, 0);
-  color: #0b131a;
+  color: white;
 }
 
 @keyframes slideDown {

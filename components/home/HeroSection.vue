@@ -133,7 +133,7 @@ onMounted(() => {
 
 <template>
   <div class="w-full relative mt-[-120px] bg-[#0b131a]">
-      <img class="w-full h-[550px]" src="/assets/images/bgHero.png" alt="Background Image Hero Section">
+      <img class="w-full h-[550px]" src="/assets/images/heroBG2.jpg" alt="Background Image Hero Section">
       <div class="absolute inset-0 top-[40%] flex flex-col items-center w-full">
         <div class="bg-[#0b131a] px-8 pt-10 pb-6 rounded-full items-center w-full max-w-[800px] test">
           <!-- Dropdown Marca -->
