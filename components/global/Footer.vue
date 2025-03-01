@@ -5,7 +5,7 @@
     <hr class="bar">
     <hr class="bar2">
     <div class="w-full bg-[#0b131a] overflow-hidden relative z-[2]">
-        <div class="pt-2 pb-4 selection:bg-[#177aa1] selection:text-white">
+        <div class="pt-2 pb-4">
             <div class="mx-auto w-full rounded-2xl flex flex-col items-center gap-6">
                 <div class="icon-container WPP">
                     <a href="#" class="icon-link">

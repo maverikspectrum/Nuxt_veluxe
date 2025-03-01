@@ -1,4 +1,3 @@
 export default {
-    title: "Portugal"
-  }
-  
+  filtersTitle: "Encontra o teu carro"
+}

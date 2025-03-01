@@ -3,8 +3,12 @@ export default defineNuxtConfig({
   i18n: {
     locales: [
       { code: 'pt', name: 'Português', file: 'pt.js' },
+      { code: 'es', name: 'Español', file: 'es.js' },
       { code: 'en', name: 'English', file: 'en.js' },
-      { code: 'fr', name: 'Français', file: 'fr.js' }
+      { code: 'fr', name: 'Français', file: 'fr.js' },
+      { code: 'de', name: 'Deutsch', file: 'de.js' },
+      { code: 'it', name: 'Italiano', file: 'it.js' },
+      { code: 'zh-CN', name: '中国人', file: 'zh-CN.js' }
     ],
     lazy: true, 
     langDir: 'lang/', 

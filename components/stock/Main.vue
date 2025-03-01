@@ -9,7 +9,15 @@ const props = defineProps({
   marca: String,
   combustivel: String,
   minAno: Number,
-  maxAno: Number
+  maxAno: Number,
+  minPreco: Number,
+  maxPreco: Number,
+  minKM: Number,
+  maxKM: Number,
+  modelo: String,
+  transmissao: String,
+  tipologia: String,
+  lugares: Number,
 });
 
 // Car data
@@ -153,9 +161,9 @@ const filteredCarros = computed(() => {
   return carros.filter(carro => {
     const isMarcaValid = props.marca ? carro.marca.toLowerCase().includes(props.marca.toLowerCase()) : true;
     const isCombustivelValid = props.combustivel ? carro.combustivel.toLowerCase().includes(props.combustivel.toLowerCase()) : true;
-    const isAnoValid = (!isNaN(props.minAno) ? carro.anoReg >= props.minAno : true) && 
-                        (!isNaN(props.maxAno) ? carro.anoReg <= props.maxAno : true);
-    
+    const isAnoValid = (props.minAno !== undefined ? carro.anoReg >= props.minAno : true) &&
+                       (props.maxAno !== undefined ? carro.anoReg <= props.maxAno : true);
+
     return isMarcaValid && isCombustivelValid && isAnoValid;
   });
 });
