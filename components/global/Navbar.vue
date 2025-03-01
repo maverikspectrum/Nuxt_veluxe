@@ -62,6 +62,7 @@ onBeforeUnmount(() => {
                     <i class="fa-solid fa-phone text-[19px] py-[5px]"></i>
                     <span class="text-[12px]">Contactos</span>
                 </button>
+                <LanguageSelector/>
             </div>
         </div>
     </div>

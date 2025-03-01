@@ -1,4 +1,4 @@
 export default {
-    filtersTitle: "Find yours now"
+    filtersTitle: "找到你的车"
   }
   

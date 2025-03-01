@@ -1,3 +1,3 @@
 export default {
-  filtersTitle: "Find yours now"
-}
+  filtersTitle: "Trouve ta voiture"
+};
