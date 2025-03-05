@@ -24,21 +24,21 @@
 .bar {
   border: none; 
   height: 1px; 
-  background: #ffbd17; /* Bright yellow */
-  box-shadow: 0 -5px 10px #f5c039, /* Glow above */
-              0 5px 10px #f5c039,  /* Glow below */
-              0 0 15px #f5c039,   /* Larger glow around */
-              0 0 30px #ffbd17;   /* Intense glowing effect */
+  background: #1abe0f; /* Bright yellow */
+  box-shadow: 0 -5px 10px #22900c, /* Glow above */
+              0 5px 10px #22900c,  /* Glow below */
+              0 0 15px #22900c,   /* Larger glow around */
+              0 0 30px #1abe0f;   /* Intense glowing effect */
 }
 
 .bar2 {
   border: none; 
   height: 1px; 
-  background: #ffbd17; /* Bright yellow */
-  box-shadow: 0 -5px 10px #f5c039, /* Glow above */
-              0 5px 10px #ffbd17,  /* Glow below */
-              0 0 15px #f5c039,   /* Larger glow around */
-              0 0 30px #ffbd17;   /* Intense glowing effect */
+  background: #1abe0f; /* Bright yellow */
+  box-shadow: 0 -5px 10px #22900c, /* Glow above */
+              0 5px 10px #1abe0f,  /* Glow below */
+              0 0 15px #22900c,   /* Larger glow around */
+              0 0 30px #1abe0f;   /* Intense glowing effect */
   transform: rotate(180deg);
 }
 

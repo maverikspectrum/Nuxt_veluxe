@@ -7,7 +7,7 @@
             <h1 class="text-[42px] text-center text-white font-extrabold w-fit leading-[55px]">
                 O que procuras?
             </h1>
-            <h1 class="text-[42px] text-center text-[#ffbd17] font-extrabold w-fit leading-[55px]">
+            <h1 class="text-[42px] text-center text-[#1abe0f] font-extrabold w-fit leading-[55px]">
                 Marcas
             </h1>
         </div>
@@ -78,21 +78,21 @@
 .bar {
   border: none; 
   height: 1px; 
-  background: #ffbd17; /* Bright yellow */
-  box-shadow: 0 -5px 10px #f5c039, /* Glow above */
-              0 5px 10px #f5c039,  /* Glow below */
-              0 0 15px #f5c039,   /* Larger glow around */
-              0 0 30px #ffbd17;   /* Intense glowing effect */
+  background: #1abe0f; /* Bright yellow */
+  box-shadow: 0 -5px 10px #22900c, /* Glow above */
+              0 5px 10px #22900c,  /* Glow below */
+              0 0 15px #22900c,   /* Larger glow around */
+              0 0 30px #1abe0f;   /* Intense glowing effect */
 }
 
 .bar2 {
   border: none; 
   height: 1px; 
-  background: #ffbd17; /* Bright yellow */
-  box-shadow: 0 -5px 10px #f5c039, /* Glow above */
-              0 5px 10px #ffbd17,  /* Glow below */
-              0 0 15px #f5c039,   /* Larger glow around */
-              0 0 30px #ffbd17;   /* Intense glowing effect */
+  background: #1abe0f; /* Bright yellow */
+  box-shadow: 0 -5px 10px #22900c, /* Glow above */
+              0 5px 10px #1abe0f,  /* Glow below */
+              0 0 15px #22900c,   /* Larger glow around */
+              0 0 30px #1abe0f;   /* Intense glowing effect */
   transform: rotate(180deg);
 }
 
@@ -109,15 +109,15 @@
   inset: 0px;
   width: 100%;
   height: 100%;
-  border: 5px #ffbd17;
+  border: 5px #1abe0f;
   padding: 240px; 
   border-radius: 50%; 
   pointer-events: none;
   transform: rotate(225deg) translate(255px) rotate(-225deg);
-  box-shadow: 0 -5px 10px #f5c039, /* Glow above */
-              0 5px 10px #f5c039,  /* Glow below */
-              0 0 15px #f5c039,   /* Larger glow around */
-              0 0 30px #ffbd17;   /* Intense glowing effect */
+  box-shadow: 0 -5px 10px #22900c, /* Glow above */
+              0 5px 10px #22900c,  /* Glow below */
+              0 0 15px #22900c,   /* Larger glow around */
+              0 0 30px #1abe0f;   /* Intense glowing effect */
 }
 
 .item {
@@ -213,15 +213,15 @@
         inset: 0px;
         width: 100%;
         height: 100%;
-        border: 5px #ffbd17;
+        border: 5px #1abe0f;
         padding: 170px; 
         border-radius: 50%; 
         pointer-events: none;
         transform: rotate(225deg) translate(180px) rotate(-225deg);
-        box-shadow: 0 -5px 10px #f5c039, /* Glow above */
-              0 5px 10px #f5c039,  /* Glow below */
-              0 0 15px #f5c039,   /* Larger glow around */
-              0 0 30px #ffbd17;   /* Intense glowing effect */
+        box-shadow: 0 -5px 10px #22900c, /* Glow above */
+              0 5px 10px #22900c,  /* Glow below */
+              0 0 15px #22900c,   /* Larger glow around */
+              0 0 30px #1abe0f;   /* Intense glowing effect */
     }
     .circle-container {
         position: relative;
@@ -272,7 +272,7 @@
         inset: 0px;
         width: 100%;
         height: 100%;
-        border: 5px #ffbd17;
+        border: 5px #1abe0f;
         padding: 190px 105px; 
         border-radius: 30%; 
         pointer-events: none;
@@ -280,7 +280,7 @@
         box-shadow: 0 -5px 10px #f5c039, /* Glow above */
               0 5px 10px #f5c039,  /* Glow below */
               0 0 15px #f5c039,   /* Larger glow around */
-              0 0 30px #ffbd17;   /* Intense glowing effect */
+              0 0 30px #1abe0f;   /* Intense glowing effect */
         
     }
     .circle-container {
