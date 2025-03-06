@@ -114,7 +114,7 @@ const carros = [
     id: 4,
     marca: "Toyota",
     modelo: "A3 Sportback 1.6 TDI Sport",
-    combustivel: "Gasóleo",
+    combustivel: "Elétrico",
     anoReg: 2013, 
     preco: "8, 640",
     potencia: 110,
@@ -678,7 +678,7 @@ function toggleOpenFilters() {
             <NuxtLink  
             :to="`/stockSingle/${carro.id}`"
             >
-              <img class="hover:scale-[1.05] transition duration-300 ease-in-out max-h-[300px] w-full" :src="carIMG" alt="Car Image">
+              <img class="hover:scale-[1.05] transition duration-300 ease-in-out max-h-[280px] w-full object-cover" :src="carIMG" alt="Car Image">
             </NuxtLink>
         </SwiperSlide>
         <div class="swiper-button-prev-custom transition duration-300 ease-in-out">

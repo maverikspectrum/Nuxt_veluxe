@@ -10,5 +10,7 @@ export default {
   kilometers: "Quilómetros",
   capacity: "Lugares",
   search: "Procurar",
-  select: "Selecionar"
+  select: "Selecionar",
+  doors: "Portas",
+  price: "Preço"
 }

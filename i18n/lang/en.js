@@ -10,6 +10,8 @@ export default {
     kilometers: "Kilometers",
     capacity: "Seats",
     search: "Search",
-    select: "Select"
+    select: "Select",
+    doors: "Doors",
+    price: "Price"
   }
   
