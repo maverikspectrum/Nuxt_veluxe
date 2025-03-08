@@ -6,13 +6,13 @@ const router = useRouter();
 const route = useRoute();
 
 const languages = [
-  { code: 'en', name: 'English', flag: '/images/en.svg' },
-  { code: '', name: 'Português', flag: '/images/pt.svg' },
-  { code: 'es', name: 'Español', flag: '/images/es.svg' },
-  { code: 'fr', name: 'Français', flag: '/images/fr.svg' },
-  { code: 'it', name: 'Italiano', flag: '/images/it.svg' },
-  { code: 'de', name: 'Deutsch', flag: '/images/de.svg' },
-  { code: 'zh-CN', name: '中国人', flag: '/images/china.svg' }
+  { code: 'en', name: 'English', flag: 'https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/languageSelector/en.svg' },
+  { code: '', name: 'Português', flag: 'https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/languageSelector/pt.svg' },
+  { code: 'es', name: 'Español', flag: 'https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/languageSelector/es.svg' },
+  { code: 'fr', name: 'Français', flag: 'https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/languageSelector/fr.svg' },
+  { code: 'it', name: 'Italiano', flag: 'https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/languageSelector/it.svg' },
+  { code: 'de', name: 'Deutsch', flag: 'https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/languageSelector/de.svg' },
+  { code: 'zh-CN', name: '中国人', flag: 'https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/languageSelector/china.svg' }
 ];
 
 const dropdownOpen = ref(false);
@@ -36,14 +36,29 @@ function changeLanguage(lang: any) {
     } else {
       router.push({ path: "/"+ lang + "/stock" });
     }
-  } else {
+  } else if (route.path.includes("/stockSingle")) {
+    if (route.path.startsWith("/stockSingle")) {
+      if (lang=='') {
+        router.push({ path: route.path })
+      } else {
+        router.push({ path: '/' + lang + route.path });
+      }
+    } else {
+      if (lang=='') {
+        router.push({ path: route.path.replace(/\/[^/]*\//, '/') });
+      } else {
+        router.push({ path: route.path.replace(/\/[^/]*\//, '/'+lang+'/') });
+      }
+    }
+  }
+   else {
     router.push({ path: "/" + lang })
   }
 }
 
 const getCurrentFlag = () => {
   const currentLang = languages.find((lang) => lang.code === locale.value);
-  return currentLang ? currentLang.flag : '/images/pt.svg';
+  return currentLang ? currentLang.flag : 'https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/languageSelector/pt.svg';
 };
 
 </script>

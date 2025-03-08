@@ -10,7 +10,7 @@ const {t, locale} = useI18n();
 const selectedRange = ref([1990, 2024]);
 const selectedRange2 = ref([10000, 500000]);
 const selectedRange3 = ref([3000, 50000]); 
-const router = useRouter();
+const localCode = useCookie("i18n_redirected");
 
 const props = defineProps({
   marca: String,
@@ -33,6 +33,7 @@ const modelo = ref(props.modelo ? props.modelo : "");
 const transmissao = ref(props.transmissao ? props.transmissao : "");
 const tipologia = ref(props.tipologia ? props.tipologia : "");
 const lugares = ref(props.lugares ? props.lugares : "");
+console.log("uopa: " + lugares.value);
 selectedRange.value[0] = props.minAno ? props.minAno : 1990;
 selectedRange.value[1] = props.maxAno ? props.maxAno : 2024;
 selectedRange3.value[0] = props.minPreco ? props.minPreco : 3000;
@@ -45,166 +46,136 @@ const carros = [
     id: 1,
     marca: "Audi",
     modelo: "A3 Sportback 1.6 TDI Sport",
-    combustivel: "Gasóleo",
+    combustivel: "diesel",
     anoReg: 2013, 
     preco: "12, 990",
-    potencia: 110,
-    cilindrada: 1598,
-    transmissao: "Manual de 6 velocidades",
-    estado: "Com pouco uso",
-    portas: 5,
-    cor: "Azul escuro",
+    transmissao: "manual",
+    tipologia: "utility",
+    lugares: 2,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+
     ]
   },
   {
     id: 2,
     marca: "BMW",
     modelo: "A3 Sportback 1.6 TDI Sport",
-    combustivel: "Gasóleo",
+    combustivel: "diesel",
     anoReg: 2011, 
     preco: "12, 990",
-    potencia: 110,
-    cilindrada: 1598,
-    transmissao: "Manual de 6 velocidades",
-    estado: "Com pouco uso",
-    portas: 5,
-    cor: "Azul escuro",
+    transmissao: "manual",
+    tipologia: "utility",
+    lugares: 4,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+
     ]
   },
   {
     id: 3,
     marca: "Fiat",
     modelo: "A3 Sportback 1.6 TDI Sport",
-    combustivel: "Gasóleo",
+    combustivel: "diesel",
     anoReg: 2013, 
     preco: "12, 990",
-    potencia: 110,
-    cilindrada: 1598,
-    transmissao: "Manual de 6 velocidades",
-    estado: "Com pouco uso",
-    portas: 5,
-    cor: "Azul escuro",
+    transmissao: "manual",
+    tipologia: "utility",
+    lugares: 5,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+
     ]
   },
   {
     id: 4,
     marca: "Toyota",
     modelo: "A3 Sportback 1.6 TDI Sport",
-    combustivel: "Elétrico",
+    combustivel: "eletric",
     anoReg: 2013, 
     preco: "8, 640",
-    potencia: 110,
-    cilindrada: 1598,
-    transmissao: "Manual de 6 velocidades",
-    estado: "Com pouco uso",
-    portas: 5,
-    cor: "Azul escuro",
+    transmissao: "automatic",
+    tipologia: "utility",
+    lugares: 5,
     kms: 50000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+
     ]
   },
   {
     id: 5,
     marca: "Peugeot",
     modelo: "A3 Sportback 1.6 TDI Sport",
-    combustivel: "Gasóleo",
+    combustivel: "diesel",
     anoReg: 2013, 
     preco: "12, 990",
-    potencia: 110,
-    cilindrada: 1598,
-    transmissao: "Manual de 6 velocidades",
-    estado: "Com pouco uso",
-    portas: 5,
-    cor: "Azul escuro",
+    transmissao: "automatic",
+    tipologia: "utility",
+    lugares: 5,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+
     ]
   },
   {
     id: 6,
     marca: "Mini",
     modelo: "A3 Sportback 1.6 TDI Sport",
-    combustivel: "Gasóleo",
+    combustivel: "diesel",
     anoReg: 2013, 
     preco: "12, 990",
-    potencia: 110,
-    cilindrada: 1598,
-    transmissao: "Manual de 6 velocidades",
-    estado: "Com pouco uso",
-    portas: 5,
-    cor: "Azul escuro",
+    transmissao: "manual",
+    tipologia: "cityBased",
+    lugares: 5,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+      
     ]
   }
 ];
 
 const orderByOptions = [
   {
-    title: "Maior preço"
+    title: t('higherPrice')
   },
   {
-    title: "Menor preço"
+    title: t('lowerPrice')
   },
   {
-    title: "Mais recente"
+    title: t('latest')
   },
   {
-    title: "Mais antigo"
+    title: t('oldest')
   },
   {
-    title: "Marca (A-Z)"
+    title: t('brandAZ')
   },
   {
-    title: "Marca (Z-A)"
+    title: t('brandZA')
   },
   {
-    title: "Mais KMs"
+    title: t('higherKMs')
   },
   {
-    title: "Menos KMs"
+    title: t('lowerKMs')
   },
 ]
 
@@ -231,25 +202,25 @@ const marcas = [
 
 const combustiveis = [
   {
-    title: "Gasolina",
+    title: t('gasoline'),
   },
   {
-    title: "Gasóleo",
+    title: t('diesel'),
   },
   {
-    title: "GPL",
+    title: t('lpg'),
   },
   {
-    title: "Elétrico"
+    title: t('eletric')
   }
 ];
 
 const transmissoes = [
   {
-    title: "Manual"
+    title: t('manual')
   },
   {
-    title: "Automático"
+    title: t('automatic')
   }
 ];
 
@@ -271,35 +242,69 @@ const lugaresOpcoes = [
   }
 ];
 
+const typologies = [
+  {
+    title: t('utility')
+  },
+  {
+    title: t('cityBased')
+  },
+  {
+    title: t('suv')
+  },
+  {
+    title: t('van')
+  },
+  {
+    title: t('monoVolume')
+  }
+];
+
+function extractNumber(input: string): number {
+    const match = input.match(/\d+/);
+    return match ? parseInt(match[0], 10) : NaN;
+}
+
+function parseFormattedNumber(input: string): number {
+    return parseInt(input.replace(/\D/g, ""), 10);
+}
+
 const orderFilter = ref("");
 
 const filteredCarros = computed(() => {
   let filtered = carros.filter(carro => {
     const isMarcaValid = marca.value ? carro.marca.toLowerCase().includes(marca.value.toLowerCase()) : true;
-    const isCombustivelValid = combustivel.value ? carro.combustivel.toLowerCase().includes(combustivel.value.toLowerCase()) : true;
+    const isCombustivelValid = combustivel.value ? t(carro.combustivel).toLowerCase().includes(combustivel.value.toLowerCase()) : true;
+    const isTransmissionValid = transmissao.value ? t(carro.transmissao).toLowerCase().includes(transmissao.value.toLowerCase()) : true;
+    const isTipologiaValid = tipologia.value ? t(carro.tipologia).toLowerCase().includes(tipologia.value.toLowerCase()) : true;
+    const isLugaresValid = lugares.value ? carro.lugares==extractNumber(lugares.value) : true;
     const isAnoValid = (selectedRange.value[0]!== undefined ? carro.anoReg >= selectedRange.value[0] : true) &&
                        (selectedRange.value[1] !== undefined ? carro.anoReg <= selectedRange.value[1] : true);
+    const isPrecoValid = (selectedRange3.value[0]!== undefined ? parseFormattedNumber(carro.preco) >= selectedRange3.value[0] : true) &&
+                       (selectedRange3.value[1] !== undefined ? parseFormattedNumber(carro.preco) <= selectedRange3.value[1] : true);
+    const isKMValid = (selectedRange2.value[0]!== undefined ? carro.kms >= selectedRange2.value[0] : true) &&
+                       (selectedRange2.value[1] !== undefined ? carro.kms <= selectedRange2.value[1] : true);
 
-    return isMarcaValid && isCombustivelValid && isAnoValid;
+    return isMarcaValid && isCombustivelValid && isAnoValid && isTransmissionValid && isTipologiaValid && isPrecoValid && isKMValid && isLugaresValid;
   });
 
   return filtered.sort((a, b) => {
     switch (orderFilter.value) {
-      case "Menor preço":
+      case t('lowerPrice'):
         return parseFloat(a.preco.replace(",", ".")) - parseFloat(b.preco.replace(",", "."));
-      case "Maior preço":
+      case t('higherPrice'):
         return parseFloat(b.preco.replace(",", ".")) - parseFloat(a.preco.replace(",", "."));
-      case "Mais recente":
+      case t('latest'):
         return a.anoReg - b.anoReg;
-      case "Mais antigo":
+      case t('oldest'):
         return b.anoReg - a.anoReg;
-      case "Marca (A-Z)":
+      case t('brandAZ'):
         return a.marca.localeCompare(b.marca);
-      case "Marca (Z-A)":
+      case t('brandZA'):
         return b.marca.localeCompare(a.marca);
-      case "Menos KMs":
+      case t('lowerKMs'):
         return a.kms - b.kms;
-        case "Mais KMs":
+        case t('higherKMs'):
         return b.kms - a.kms;
       default:
         return 0;
@@ -579,7 +584,7 @@ function toggleOpenFilters() {
     </div>
     <div class="relative w-[140px] mt-2">
       <select v-model="orderFilter" class="bg-transparent w-[140px] hover:bg-transparent px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#1abe0f]">
-        <option class="bg-[#0b131a]" value="">Ordenar por</option>
+        <option class="bg-[#0b131a]" value="">{{ t('orderBy') }}</option>
         <option class="bg-[#0b131a]" v-for="marca in orderByOptions" :key="marca.title" :value="marca.title">{{ marca.title }}</option>
       </select>
       <svg class="absolute top-[10px] right-1 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
@@ -621,7 +626,7 @@ function toggleOpenFilters() {
           <label class="text-xs text-[#1abe0f] ml-2 font-semibold">{{ t('typology') }}</label>
           <select v-model="tipologia" class="bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-green-500">
             <option class="bg-[#0b131a]" value="">{{ t('select') }}</option>
-            <option class="bg-[#0b131a]" v-for="combustivel in combustiveis" :key="combustivel.title">{{ combustivel.title }}</option>
+            <option class="bg-[#0b131a]" v-for="opt in typologies" :key="opt.title">{{ opt.title }}</option>
           </select>
           <svg class="absolute top-[50%] right-12 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
         </div>
@@ -646,7 +651,7 @@ function toggleOpenFilters() {
           <label class="text-xs text-[#1abe0f] ml-2 font-semibold">{{ t('capacity') }}</label>
           <select v-model="lugares" class="bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-green-500">
             <option class="bg-[#0b131a]" value="">{{ t('select') }}</option>
-            <option class="bg-[#0b131a]" v-for="opt in lugaresOpcoes" :key="opt.title">{{ opt.title + " lugares" }}</option>
+            <option class="bg-[#0b131a]" v-for="opt in lugaresOpcoes" :key="opt.title">{{ opt.title + ' ' + t('seats') }}</option>
           </select>
           <svg class="absolute top-[50%] right-12 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
         </div>
@@ -654,7 +659,10 @@ function toggleOpenFilters() {
     </div>
   </div>
 
-  <div class="bg-[#0b131a] w-full pb-20 px-20 grid grid-cols-3 gap-10" :class="{'pt-6': openFilters}">
+  <div v-if="filteredCarros.length==0" class="bg-[#0b131a] w-full pb-20 flex justify-center items-center text-5xl font-black text-white" :style="{ height: 'calc(100vh - 198px)' }">
+    No cars correspond the preferences.
+  </div>
+  <div v-else class="bg-[#0b131a] w-full pb-20 px-20 grid grid-cols-3 gap-10" :class="{'pt-6': openFilters}" :style="{ minHeight: 'calc(100vh - 198px)' }">
     <div
     v-for="(carro, index) in filteredCarros" :key="carro.modelo" 
     class="pt-8 px-8 test rounded-2xl bg-[#0b131a]"
@@ -676,7 +684,7 @@ function toggleOpenFilters() {
       >
         <SwiperSlide v-for="carIMG in carro.imagens" class="w-full relative">
             <NuxtLink  
-            :to="`/stockSingle/${carro.id}`"
+            :to="localCode=='pt' ? `/stockSingle/${carro.id}` : '/'+localCode+`/stockSingle/${carro.id}`"
             >
               <img class="hover:scale-[1.05] transition duration-300 ease-in-out max-h-[280px] w-full object-cover" :src="carIMG" alt="Car Image">
             </NuxtLink>
@@ -698,7 +706,7 @@ function toggleOpenFilters() {
           </div>
           <div class="w-full flex items-center gap-1 justify-start">
             <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><g fill="currentColor"><path d="M3 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-.5.5h-5a.5.5 0 0 1-.5-.5z"/><path d="M1 2a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v8a2 2 0 0 1 2 2v.5a.5.5 0 0 0 1 0V8h-.5a.5.5 0 0 1-.5-.5V4.375a.5.5 0 0 1 .5-.5h1.495c-.011-.476-.053-.894-.201-1.222a.97.97 0 0 0-.394-.458c-.184-.11-.464-.195-.9-.195a.5.5 0 0 1 0-1q.846-.002 1.412.336c.383.228.634.551.794.907c.295.655.294 1.465.294 2.081v3.175a.5.5 0 0 1-.5.501H15v4.5a1.5 1.5 0 0 1-3 0V12a1 1 0 0 0-1-1v4h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1zm9 0a1 1 0 0 0-1-1H3a1 1 0 0 0-1 1v13h8z"/></g></svg>
-            <p class="text-sm font-semibold">{{ carro.combustivel }}</p>
+            <p class="text-sm font-semibold">{{ t(carro.combustivel) }}</p>
           </div>
           <div class="w-full flex items-center gap-1 justify-start">
             <svg class="mb-1" xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M2 21.998V11.996m20 10.002V11.996M12 21.998v-1m0-3.001v-1M5.725 5.655l.83.758m0 0c.16-.268.435-.738.527-1.032c.799-2.57.87-3.278 2.103-3.38h5.627c1.234.102 1.304.81 2.103 3.38c.091.294.318.764.477 1.032m-10.837 0C5.951 7.433 5.15 8.1 5.03 8.98c-.02.145 0 1.752 0 2.918c0 .876.844.85 1.666.918c.523.043 1.046.138 1.57.143c2.906.03 4.828.033 7.702.002c.556-.006 1.116-.11 1.67-.158c.625-.053 1.28-.123 1.33-.905c.077-1.165.02-2.773 0-2.918c-.12-.88-.97-1.547-1.575-2.567m-10.837 0h10.837m0 0l.972-.759M5.204 8.43l1.208.92m4.146 1.162h2.939m4.123-1.185l1.335-.425M7.082 12.855L7.004 14.5m9.978-1.623V14.5" color="currentColor"/></svg>
@@ -706,10 +714,10 @@ function toggleOpenFilters() {
           </div>
         </div>
         <NuxtLink  
-        :to="`/stockSingle/${carro.id}`"
+        :to="localCode=='pt' ? `/stockSingle/${carro.id}` : '/'+localCode+`/stockSingle/${carro.id}`"
         class="text-center w-3/4 p-2 rounded-full bg-[#22900c] mt-2 mb-4 text-white hover:bg-[#1d7f0a] hover:scale-[1.01] transition duration-300 ease-in-out"
         >
-          <i class="fa-solid fa-magnifying-glass"></i> Saber mais
+          <i class="fa-solid fa-magnifying-glass"></i> {{ t('moreInfo') }}
         </NuxtLink>
       </div>
     </div>

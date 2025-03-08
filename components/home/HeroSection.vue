@@ -40,25 +40,25 @@ const marcas = [
 
 const combustiveis = [
   {
-    title: "Gasolina",
+    title: t('gasoline'),
   },
   {
-    title: "Gasóleo",
+    title: t('diesel'),
   },
   {
-    title: "GPL",
+    title: t('lpg'),
   },
   {
-    title: "Elétrico"
+    title: t('eletric')
   }
 ]
 
 const transmissoes = [
   {
-    title: "Manual"
+    title: t('manual')
   },
   {
-    title: "Automático"
+    title: t('automatic')
   }
 ];
 
@@ -77,6 +77,24 @@ const lugaresOpcoes = [
   },
   {
     title: 6
+  }
+];
+
+const typologies = [
+  {
+    title: t('utility')
+  },
+  {
+    title: t('cityBased')
+  },
+  {
+    title: t('suv')
+  },
+  {
+    title: t('van')
+  },
+  {
+    title: t('monoVolume')
   }
 ];
 
@@ -330,9 +348,9 @@ function toggleOpenFilters() {
 
 <template>
   <div class="w-full relative mt-[-120px] bg-[#0b131a]">
-      <img class="w-full h-[550px]" src="/assets/images/heroBG2.jpg" alt="Background Image Hero Section">
-      <div class="absolute inset-0 top-[20%] flex flex-col items-center w-full">
-        <div class="bg-[#0b131a] px-8 pt-10 pb-6 rounded-[100px] items-center justify-center w-full max-w-[800px] test">
+      <img class="w-full h-[550px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/bgHero.jpg" alt="Background Image Hero Section">
+      <div class="absolute inset-0 top-[22%] flex flex-col items-center w-full">
+        <div class="bg-[#0b131a] px-8 pt-10 pb-6 rounded-[100px] items-center justify-center w-full max-w-[900px] test">
           <div class="text-[#1abe0f] flex justify-between items-center px-10 mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2m0 2a8 8 0 0 1 8 8c0 2.4-1 4.5-2.7 6c-1.4-1.3-3.3-2-5.3-2s-3.8.7-5.3 2C5 16.5 4 14.4 4 12a8 8 0 0 1 8-8m2 1.89c-.38.01-.74.26-.9.65l-1.29 3.23l-.1.23c-.71.13-1.3.6-1.57 1.26c-.41 1.03.09 2.19 1.12 2.6s2.19-.09 2.6-1.12c.26-.66.14-1.42-.29-1.98l.1-.26l1.29-3.21l.01-.03c.2-.51-.05-1.09-.56-1.3c-.13-.05-.26-.07-.41-.07M10 6a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1M7 9a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1m10 0a1 1 0 0 0-1 1a1 1 0 0 0 1 1a1 1 0 0 0 1-1a1 1 0 0 0-1-1"/></svg>
             <h1 class="text-[#1abe0f] text-center text-2xl font-semibold pb-2 mr-10">
@@ -402,7 +420,7 @@ function toggleOpenFilters() {
                 <label class="text-xs text-[#1abe0f] ml-2 font-semibold">{{ t('typology') }}</label>
                 <select v-model="tipologia" class="bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-green-500">
                   <option class="bg-[#0b131a]" value="">{{ t('select') }}</option>
-                  <option class="bg-[#0b131a]" v-for="combustivel in combustiveis" :key="combustivel.title">{{ combustivel.title }}</option>
+                  <option class="bg-[#0b131a]" v-for="opt in typologies" :key="opt.title">{{ opt.title }}</option>
                 </select>
                 <svg class="absolute top-[50%] right-12 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
               </div>
@@ -427,7 +445,7 @@ function toggleOpenFilters() {
                 <label class="text-xs text-[#1abe0f] ml-2 font-semibold">{{ t('capacity') }}</label>
                 <select v-model="lugares" class="bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-green-500">
                   <option class="bg-[#0b131a]" value="">{{ t('select') }}</option>
-                  <option class="bg-[#0b131a]" v-for="opt in lugaresOpcoes" :key="opt.title">{{ opt.title + " lugares" }}</option>
+                  <option class="bg-[#0b131a]" v-for="opt in lugaresOpcoes" :key="opt.title">{{ opt.title + ' ' +  t('seats') }}</option>
                 </select>
                 <svg class="absolute top-[50%] right-12 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
               </div>

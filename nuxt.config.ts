@@ -26,7 +26,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
+  	
+  runtimeConfig: {
+    public: {
+      SUPABASE_URL: process.env.SUPABASE_URL,
+      SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY,
+    }
+  },
+  
   components: true,
   compatibilityDate: '2025-02-21',
 })

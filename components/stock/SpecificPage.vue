@@ -8,6 +8,7 @@ const props = defineProps({
   id: Number,
 });
 
+
 const carros = [
   {
     id: 1,
@@ -27,12 +28,10 @@ const carros = [
     consumo: 6.3,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+
     ]
   },
   {
@@ -53,12 +52,9 @@ const carros = [
     consumo: 6.3,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
     ]
   },
   {
@@ -79,12 +75,10 @@ const carros = [
     consumo: 6.3,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+
     ]
   },
   {
@@ -105,12 +99,10 @@ const carros = [
     consumo: 6.3,
     kms: 50000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+
     ]
   },
   {
@@ -131,12 +123,10 @@ const carros = [
     consumo: 6.3,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
+
     ]
   },
   {
@@ -157,12 +147,9 @@ const carros = [
     consumo: 6.3,
     kms: 190000,
     imagens: [
-      "/images/mini1.jpg",
-      "/images/mini2.jpg",
-      "/images/mini10.jpg",
-      "/images/mini11.jpg",
-      "/images/mini12.jpg",
-      "/images/mini13.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini2.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini12.jpg",
+      "https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages//mini8.jpg"
     ]
   }
 ];
@@ -182,9 +169,9 @@ const closeFullscreen = () => {
 </script>
 <template>
   <div v-if="!getCarro()" class="bg-[#0b131a] flex justify-center items-center h-screen text-5xl font-black text-white">
-    No car found
+    No car was found.
   </div>
-  <div v-else class="bg-[#0b131a] min-h-screen p-10 pt-14">
+  <div v-else class="bg-[#0b131a] p-10 pt-20" :style="{ height: 'calc(100vh - 92px)' }">
     <div class="flex justify-center test2 rounded-xl">
       <div class="bg-[#0b131a] w-1/2 rounded-l-xl p-6 text-white">
         <h1 class="text-white text-3xl text-left pb-3 font-black">
@@ -332,7 +319,7 @@ const closeFullscreen = () => {
             </svg>
             <div class="flex flex-col justify-center items-start mt-2">
               <p class="leading-[13px] text-gray-500">
-                {{ t('cilindratingz') }}
+                {{ t('cylinderCapacity') }}
               </p>
               <p class="font-medium">
                 {{ getCarro()?.cilindrada + " Cc" }}
@@ -397,14 +384,14 @@ const closeFullscreen = () => {
                 {{ t('price') }}
               </h1>
             </div>
-            <h1 class="text-white text-3xl font-bold">
+            <h1 class="text-white text-3xl font-bold italic">
               {{ getCarro()?.preco + " €" }}
             </h1>
           </div>
 
           <div class="w-1/2 flex justify-center items-center flex-col mt-14">
-            <button class="border-2 btc border-[#22900c] hover:bg-[#22900c] btc text-[#1abe0f] p-4 px-8 rounded-xl hover:scale-[1.02] transition duration-300 ease-in-out">
-              Interested? Contact us
+            <button class="border-2 btc border-[#22900c] hover:bg-[#22900c] btc text-[#1abe0f] p-4 ps-8 pe-8 rounded-xl hover:scale-[1.02] transition duration-300 ease-in-out">
+              {{ t('interested') }}
               <i class="fa-solid fa-phone text-[19px] text-[#22900c] py-[5px] icn transition duration-300 ease-in-out"></i>
             </button>
           </div>

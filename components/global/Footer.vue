@@ -8,7 +8,7 @@
         <div class="pt-2 pb-4">
             <div class="mx-auto w-full rounded-2xl flex flex-col items-center gap-6">
                 <div class="icon-container WPP">
-                    <a href="#" class="icon-link">
+                    <a href="https://wa.me/351933111764?text=Olá, estou interessado em comprar um carro. Podemos conversar?" class="icon-link">
                         <i class="fa-brands fa-whatsapp text-white text-2xl"></i>
                     </a>
                 </div>

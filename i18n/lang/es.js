@@ -1,4 +1,5 @@
 export default {
-    filtersTitle: "Encuentra tu auto"
+    filtersTitle: "Encuentra tu auto",
+    lpg: "GPL"
   }
   

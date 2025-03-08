@@ -21,52 +21,52 @@
                 </div>
                 <NuxtLink to="/stock?marca=Volkswagen">
                     <div class="moving-element1 item item1 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[75px] sm:w-[90px]" src="/assets/images/volkswagenLogo.png" alt="LogoChannel">
+                        <img class="w-[75px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/volkswagenLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=BMW">
                     <div class="moving-element2 item item2 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[75px] sm:w-[80px]" src="/assets/images/bmwLogo.png" alt="LogoChannel">
+                        <img class="w-[75px] sm:w-[80px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/bmwLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Audi">
                     <div class="moving-element3 item item3 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[75px] sm:w-[90px]" src="/assets/images/audiLogo.png" alt="LogoChannel">
+                        <img class="w-[75px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/audiLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Mercedes">
                     <div class="moving-element4 item item4 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[75px] sm:w-[90px]" src="/assets/images/mercedesLogo.png" alt="LogoChannel">
+                        <img class="w-[75px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/mercedesLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Fiat">
                     <div class="moving-element5 item item5 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[65px] sm:w-[90px]" src="/assets/images/fiatLogo.png" alt="LogoChannel">
+                        <img class="w-[65px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/fiatLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Peugeot">
                     <div class="moving-element6 item item6 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[55px] sm:w-[75px]" src="/assets/images/peugeoutLogo.png" alt="LogoChannel">
+                        <img class="w-[55px] sm:w-[75px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/peugeoutLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Renault">
                     <div class="moving-element7 item item7 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[55px] sm:w-[75px]" src="/assets/images/renaultLogo.png" alt="LogoChannel">
+                        <img class="w-[55px] sm:w-[75px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/renaultLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Toyota">
                     <div class="moving-element8 item item8 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[75px] sm:w-[90px]" src="/assets/images/toyotaLogo.png" alt="LogoChannel">
+                        <img class="w-[75px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/toyotaLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Nissan">
                     <div class="moving-element9 item item9 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[75px] sm:w-[110px]" src="/assets/images/nissanLogo.png" alt="LogoChannel">
+                        <img class="w-[75px] sm:w-[110px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/nissanLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Seat">
                     <div class="moving-element10 item item10 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
-                        <img class="w-[65px] sm:w-[75px]" src="/assets/images/seatLogo.png" alt="LogoChannel">
+                        <img class="w-[65px] sm:w-[75px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/seatLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
             </div>
