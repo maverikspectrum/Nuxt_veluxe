@@ -569,7 +569,7 @@ const resetFilters = () => {
 </script>
 
 <template>
-  <div class="bg-[#121212] pt-8 px-5 xs:px-10 lg:px-20 flex justify-between items-end" :class="{'pb-6': !openFilters || isHiding}">
+  <div class="bg-[#121212] pt-8 pb-1 px-5 xs:px-10 lg:px-20 flex justify-between items-end" :class="{'pb-6': !openFilters || isHiding}">
     <div class="w-[140px] text-white flex justify-start items-center">
       <button
         @click="toggleOpenFilters()"
@@ -583,40 +583,7 @@ const resetFilters = () => {
         </button>
       </div>
     </div>
-    <div 
-      v-if="openFilters"
-      :class="{
-        'appearSmooth': openFilters && !isHiding,
-        'disappearSmooth': isHiding
-      }"
-      class="w-11/12 transition-all duration-[1.5s] ease-in-out flex justify-start items-center"
-    >
-      <div class="w-full flex justify-center items-center">
-        <div class="w-[30%] rounded-xl relative">
-          <label class="text-xs text-[#b53d3d] ml-2 font-semibold">{{ t('brand') }}</label>
-          <select v-model="marca" class="bg-transparent hover:bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#b53d3d]">
-            <option class="bg-[#121212]" value="">{{ t('select') }}</option>
-            <option class="bg-[#121212]" v-for="marca in marcas" :key="marca.title" :value="marca.title">{{ marca.title }}</option>
-          </select>
-          <svg class="absolute top-[50%] right-2 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
-        </div>
 
-        <div class="w-[44%] ml-[14px] pr-[14px] flex flex-col gap-3 mb-2">
-          <label class="text-xs text-[#b53d3d] font-semibold mr-6">{{ t('year') }}</label>
-          <div id="year-slider" class="slider relative px-4" :class="{'pr-8': selectedRange.length<50}"></div>
-        </div>
-
-        <!-- Dropdown Combustível -->
-        <div class="w-[30%] relative pr-10">
-          <label class="text-xs text-[#b53d3d] ml-2 font-semibold">{{ t('fuel') }}</label>
-          <select v-model="combustivel" class="bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#b53d3d]">
-            <option class="bg-[#121212]" value="">{{ t('select') }}</option>
-            <option class="bg-[#121212]" v-for="combustivel in combustiveis" :key="combustivel.title">{{ combustivel.title }}</option>
-          </select>
-          <svg class="absolute top-[50%] right-12 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
-        </div>
-      </div>
-    </div>
     <div class="relative w-[140px] mt-2">
       <select v-model="orderFilter" class="bg-transparent w-[140px] hover:bg-transparent px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#b53d3d]">
         <option class="bg-[#121212]" value="">{{ t('orderBy') }}</option>
@@ -627,22 +594,45 @@ const resetFilters = () => {
   </div>
 
 
-  <div 
-    class="w-full bg-[#121212] flex justify-center items-center px-20"
+  <div v-if="openFilters"
+    class="w-full bg-[#121212] pt-1 flex justify-center items-center px-5 xs:px-10 lg:px-20"
   >
     <div 
-    v-if="openFilters"
     :class="{
       'appearSmooth': openFilters && !isHiding,
       'disappearSmooth': isHiding
     }"
     class="w-full bg-[#121212] transition-all duration-[1.5s] ease-in-out"
-    >
-      <div class="w-full flex justify-center items-center">
+    > 
+    <div class="flex flex-col md:flex-row justify-center items-center pt-2">
+        <div class="w-full md:w-[25%] rounded-xl relative">
+          <label class="text-xs text-[#b53d3d] ml-2 font-semibold">{{ t('brand') }}</label>
+          <select v-model="marca" class="bg-transparent hover:bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#b53d3d]">
+            <option class="bg-[#121212]" value="">{{ t('select') }}</option>
+            <option class="bg-[#121212]" v-for="marca in marcas" :key="marca.title" :value="marca.title">{{ marca.title }}</option>
+          </select>
+          <svg class="absolute top-[50%] right-2 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
+        </div>
+
+        <div class="w-[96%] md:w-[50%] ml-0 md:ml-[9px] pl-0 md:pl-[3px] pr-0 md:pr-[12px] py-2 flex justify-center flex-col gap-3 mb-2">
+          <label class="text-xs text-[#b53d3d] font-semibold mr-6">{{ t('year') }}</label>
+          <div id="year-slider" class="slider relative px-4" :class="{'pr-8': selectedRange.length<50}"></div>
+        </div>
+
+        <div class="w-full md:w-[25%] relative">
+          <label class="text-xs text-[#b53d3d] ml-2 font-semibold">{{ t('fuel') }}</label>
+          <select v-model="combustivel" class="bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#b53d3d]">
+            <option class="bg-[#121212]" value="">{{ t('select') }}</option>
+            <option class="bg-[#121212]" v-for="opt in combustiveis" :key="opt.title">{{ opt.title }}</option>
+          </select>
+          <svg class="absolute top-[50%] right-2 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
+        </div>
+      </div>
+      <div class="w-full flex justify-center items-center bg-[#121212]">
         <div class="mt-6 bg-[#b53d3d] opacity-[0.3] h-[1px] w-full py-[1px]"></div>
       </div>
-      <div class="flex justify-center items-center px-3 pt-2 pl-10">
-        <div class="w-[30%] rounded-xl relative">
+      <div class="flex flex-col md:flex-row justify-center items-center pt-2">
+        <div class="w-full md:w-[25%] rounded-xl relative">
           <label class="text-xs text-[#b53d3d] ml-2 font-semibold">{{ t('model') }}</label>
           <select v-model="modelo" class="bg-transparent hover:bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#b53d3d]">
             <option class="bg-[#121212]" value="">{{ t('select') }}</option>
@@ -651,23 +641,22 @@ const resetFilters = () => {
           <svg class="absolute top-[50%] right-2 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
         </div>
 
-        <div class="w-[40%] ml-[9px] pl-[3px] pr-[21px] flex flex-col gap-3 mb-2 mr-5">
+        <div class="w-[96%] md:w-[50%] ml-[9px] pl-[3px] pr-[21px] py-2 flex justify-center flex-col gap-3 mb-2 mr-5">
           <label class="text-xs text-[#b53d3d] font-semibold mr-6">{{ t('budget') }}</label>
           <div id="price-slider" class="slider relative px-4"></div>
         </div>
 
-        <!-- Dropdown Combustível -->
-        <div class="w-[30%] relative pr-10">
+        <div class="w-full md:w-[25%] relative">
           <label class="text-xs text-[#b53d3d] ml-2 font-semibold">{{ t('typology') }}</label>
           <select v-model="tipologia" class="bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#b53d3d]">
             <option class="bg-[#121212]" value="">{{ t('select') }}</option>
             <option class="bg-[#121212]" v-for="opt in typologies" :key="opt.title">{{ opt.title }}</option>
           </select>
-          <svg class="absolute top-[50%] right-12 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
+          <svg class="absolute top-[50%] right-2 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
         </div>
       </div>
-      <div class="flex justify-center items-center px-3 pt-2 pl-10">
-        <div class="w-[30%] rounded-xl relative">
+      <div class="flex-col md:flex-row flex justify-center items-center pt-2">
+        <div class="w-full md:w-[25%] rounded-xl relative">
           <label class="text-xs text-[#b53d3d] ml-2 font-semibold">{{ t('transmission') }}</label>
           <select v-model="transmissao" class="bg-transparent hover:bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#b53d3d]">
             <option class="bg-[#121212]" value="">{{ t('select') }}</option>
@@ -676,25 +665,27 @@ const resetFilters = () => {
           <svg class="absolute top-[50%] right-2 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
         </div>
 
-        <div class="w-[40%] pl-[12px] pr-[34px] flex flex-col gap-3 mb-2 mr-7">
+        <div class="w-[96.5%] md:w-[50%] pl-[12px] pr-[34px] py-2 flex justify-center flex-col gap-3 mb-2 mr-7">
           <label class="text-xs text-[#b53d3d] font-semibold mr-6">{{ t('kilometers') }}</label>
           <div id="kilometer-slider" class="slider relative px-4"></div>
         </div>
 
-        <!-- Dropdown Combustível -->
-        <div class="w-[30%] relative pr-10">
+        <div class="w-full md:w-[25%] relative">
           <label class="text-xs text-[#b53d3d] ml-2 font-semibold">{{ t('capacity') }}</label>
           <select v-model="lugares" class="bg-transparent w-full px-3 py-2 bg-gray-800 text-white rounded-2xl border appearance-none focus:outline-none border-[#b53d3d]">
             <option class="bg-[#121212]" value="">{{ t('select') }}</option>
             <option class="bg-[#121212]" v-for="opt in lugaresOpcoes" :key="opt.title">{{ opt.title + ' ' + t('seats') }}</option>
           </select>
-          <svg class="absolute top-[50%] right-12 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
+          <svg class="absolute top-[50%] right-2 pointer-events-none" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 12 12"><path fill="white" d="M3.076 4.617A1 1 0 0 1 4 4h4a1 1 0 0 1 .707 1.707l-2 2a1 1 0 0 1-1.414 0l-2-2a1 1 0 0 1-.217-1.09"/></svg>
         </div>
+      </div>
+      <div class="w-full flex justify-center items-center bg-[#121212] text-[#121212]">
+        <div class="mt-6 bg-[#b53d3d] opacity-[0.3] h-[1px] w-full py-[1px]"></div>
       </div>
     </div>
   </div>
 
-  <div v-if="filteredCarros.length==0" class="bg-[#121212] w-full pb-20 flex justify-center items-center text-5xl font-black text-white" :style="{ height: 'calc(100vh - 198px)' }">
+  <div v-if="filteredCarros.length==0" class="bg-[#121212] text-center w-full pb-20 flex justify-center items-center text-3xl lg:text-5xl font-black text-white" :style="{ height: 'calc(100vh - 198px)' }">
     No cars correspond the preferences.
   </div>
   <div v-else class="bg-[#121212] w-full pb-20 px-5 xs:px-10 lg:px-20 grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10" :class="{'pt-6': openFilters}" :style="{ minHeight: 'calc(100vh - 198px)' }">
@@ -837,7 +828,18 @@ const resetFilters = () => {
 @keyframes slide-up {
   from {
     opacity: 1;
-    max-height: 200px;
+    max-height: 273px;
+  }
+  to {
+    opacity: 0;
+    max-height: 0;
+  }
+}
+
+@keyframes slide-up2 {
+  from {
+    opacity: 1;
+    max-height: 650px;
   }
   to {
     opacity: 0;
@@ -850,6 +852,12 @@ const resetFilters = () => {
   overflow: hidden;
 }
 
+@media (max-width: 640px) {
+  .disappearSmooth{
+    animation: slide-up2 1s ease-in-out;
+    overflow: hidden;
+  }
+}
 #price-slider .noUi-tooltip,
 #kilometer-slider .noUi-tooltip {
   display: none;

@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue';
+import { onClickOutside } from '@vueuse/core'
 
 const { t, locale } = useI18n();
 const router = useRouter();
@@ -28,6 +29,12 @@ const closeDropdown = () => {
 const closeNopenDropdown = () => {
   dropdownOpen.value = !dropdownOpen.value;
 };
+
+const dropdownRef = ref(null);
+
+onClickOutside(dropdownRef, () => {
+  dropdownOpen.value = false;
+})
 
 function changeLanguage(lang: any) {
   if (route.path.endsWith("/stock")) {
@@ -66,7 +73,7 @@ const getCurrentFlag = () => {
 <template>
 
   <!-- Language Selector -->
-  <div class="relative inline-block text-left py-4 mr-2" @mouseover="openDropdown" @mouseleave="closeDropdown">
+  <div class="relative inline-block text-left py-4 mr-2" @click="closeNopenDropdown()">
     <!-- Flag Button -->
     <div class="inline-flex items-center cursor-pointer">
       <img :src="getCurrentFlag()" class="w-5 h-5" />
@@ -74,7 +81,7 @@ const getCurrentFlag = () => {
     </div>
 
     <!-- Dropdown Menu (only shown when hovered) -->
-    <div v-if="dropdownOpen">
+    <div ref="dropdownRef" v-if="dropdownOpen">
       <ul class="absolute top-8 mt-2 w-32 bg-white rounded-md shadow-lg z-20 py-1 left-[-80px] xl:left-[-50px] font-semibold text-sm">
         <li v-for="lang in languages" :key="lang.code" @click="changeLanguage(lang.code)" class="text-[#3b4249] hover:text-[#b53d3d] flex items-center px-4 py-2 text-gray-700 hover:bg-gray-100 cursor-pointer">
           <img :src="lang.flag" class="w-5 h-5 mr-2" />

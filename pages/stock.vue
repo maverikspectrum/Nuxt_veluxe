@@ -19,6 +19,7 @@ const lugares = route.query.lugares as string;
 </script>
 
 <template>
+  <div class="bg-[#121212]">
     <StockMain
       :marca="marca"
       :combustivel="combustivel"
@@ -33,4 +34,5 @@ const lugares = route.query.lugares as string;
       :tipologia="tipologia"
       :lugares="lugares"
     />
+  </div>
 </template>

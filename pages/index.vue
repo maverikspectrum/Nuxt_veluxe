@@ -5,8 +5,10 @@ definePageMeta({
 </script>
 
 <template>
-  <HomeHeroSection />
-  <HomeBrand />
+  <div class="bg-[#121212]">
+    <HomeHeroSection />
+    <HomeBrand />
+  </div>
 </template>
 
 

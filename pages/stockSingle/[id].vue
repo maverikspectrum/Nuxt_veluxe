@@ -8,7 +8,9 @@ const id = parseInt(route.params.id as string) || undefined;
 </script>
 
 <template>
-    <StockSpecificPage
-      :id="id"
-    />
+  <div class="bg-[#121212]">
+      <StockSpecificPage
+        :id="id"
+      />
+    </div>
 </template>
