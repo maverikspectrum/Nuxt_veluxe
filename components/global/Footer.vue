@@ -4,7 +4,7 @@
 <template>
     <hr class="bar">
     <hr class="bar2">
-    <div class="w-full bg-[#0b131a] overflow-hidden relative z-[2]">
+    <div class="w-full bg-[#121212] overflow-hidden relative z-[2]">
         <div class="pt-2 pb-4">
             <div class="mx-auto w-full rounded-2xl flex flex-col items-center gap-6">
                 <div class="icon-container WPP">
@@ -24,21 +24,21 @@
 .bar {
   border: none; 
   height: 1px; 
-  background: #1abe0f; /* Bright yellow */
-  box-shadow: 0 -5px 10px #22900c, /* Glow above */
-              0 5px 10px #22900c,  /* Glow below */
-              0 0 15px #22900c,   /* Larger glow around */
-              0 0 30px #1abe0f;   /* Intense glowing effect */
+  background: #b53d3d; /* Bright yellow */
+  box-shadow: 0 -5px 10px #b53d3d, /* Glow above */
+              0 5px 10px #b53d3d,  /* Glow below */
+              0 0 15px #b53d3d,   /* Larger glow around */
+              0 0 30px #b53d3d;   /* Intense glowing effect */
 }
 
 .bar2 {
   border: none; 
   height: 1px; 
-  background: #1abe0f; /* Bright yellow */
-  box-shadow: 0 -5px 10px #22900c, /* Glow above */
-              0 5px 10px #1abe0f,  /* Glow below */
-              0 0 15px #22900c,   /* Larger glow around */
-              0 0 30px #1abe0f;   /* Intense glowing effect */
+  background: #b53d3d; /* Bright yellow */
+  box-shadow: 0 -5px 10px #b53d3d, /* Glow above */
+              0 5px 10px #D32F2F,  /* Glow below */
+              0 0 15px #b53d3d,   /* Larger glow around */
+              0 0 30px #D32F2F;   /* Intense glowing effect */
   transform: rotate(180deg);
 }
 
@@ -113,7 +113,7 @@
 }
 
 .WPP::before {
-  background-color: #25d366; 
+  background-color: #c72121; 
 }
 
 .horizontal-line {

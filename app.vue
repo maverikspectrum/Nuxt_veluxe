@@ -15,7 +15,7 @@ useHead({
 
 <style>
 ::selection {
-  background-color: #44cc29;
+  background-color: #d47474;
   color: white; 
 }
 body {

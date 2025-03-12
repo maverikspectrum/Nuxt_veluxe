@@ -1,13 +1,13 @@
 <template>
-    <div class="h-16 bg-[#0b131a]"></div>
+    <div class="h-16 bg-[#121212]"></div>
     <hr class="bar">
     <hr class="bar2">
-    <div class="w-full flex flex-col items-center justify-start gap-24 h-[700px] sm:h-[840px] bg-[#0b131a] overflow-hidden xl:overflow-visible">
+    <div class="w-full flex flex-col items-center justify-start gap-24 h-[700px] sm:h-[840px] bg-[#121212] overflow-hidden xl:overflow-visible">
         <div class="mt-8 flex flex-col justify-center items-center">
             <h1 class="text-[42px] text-center text-white font-extrabold w-fit leading-[55px]">
                 O que procuras?
             </h1>
-            <h1 class="text-[42px] text-center text-[#1abe0f] font-extrabold w-fit leading-[55px]">
+            <h1 class="text-[42px] text-center text-[#D32F2F] font-extrabold w-fit leading-[55px]">
                 Marcas
             </h1>
         </div>
@@ -16,56 +16,56 @@
             <div class="circle-container">
                 <div class="dotted-circle"></div>
 
-                <div class="item item0 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                <div class="item item0 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                     <img class="w-[70px] xs:w-[80px] sm:w-auto" src="" alt="VeluxeAuto Logo">
                 </div>
                 <NuxtLink to="/stock?marca=Volkswagen">
-                    <div class="moving-element1 item item1 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element1 item item1 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[75px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/volkswagenLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=BMW">
-                    <div class="moving-element2 item item2 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element2 item item2 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[75px] sm:w-[80px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/bmwLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Audi">
-                    <div class="moving-element3 item item3 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element3 item item3 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[75px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/audiLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Mercedes">
-                    <div class="moving-element4 item item4 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element4 item item4 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[75px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/mercedesLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Fiat">
-                    <div class="moving-element5 item item5 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element5 item item5 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[65px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/fiatLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Peugeot">
-                    <div class="moving-element6 item item6 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element6 item item6 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[55px] sm:w-[75px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/peugeoutLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Renault">
-                    <div class="moving-element7 item item7 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element7 item item7 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[55px] sm:w-[75px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/renaultLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Toyota">
-                    <div class="moving-element8 item item8 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element8 item item8 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[75px] sm:w-[90px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/toyotaLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Nissan">
-                    <div class="moving-element9 item item9 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element9 item item9 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[75px] sm:w-[110px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/nissanLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
                 <NuxtLink to="/stock?marca=Seat">
-                    <div class="moving-element10 item item10 center-item bg-[#13202c] shadow-md rounded-full flex justify-center items-center">
+                    <div class="moving-element10 item item10 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
                         <img class="w-[65px] sm:w-[75px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/seatLogo.png" alt="LogoChannel">
                     </div>
                 </NuxtLink>
@@ -78,21 +78,21 @@
 .bar {
   border: none; 
   height: 1px; 
-  background: #1abe0f; /* Bright yellow */
-  box-shadow: 0 -5px 10px #22900c, /* Glow above */
-              0 5px 10px #22900c,  /* Glow below */
-              0 0 15px #22900c,   /* Larger glow around */
-              0 0 30px #1abe0f;   /* Intense glowing effect */
+  background: #b53d3d; /* Bright yellow */
+  box-shadow: 0 -5px 10px #b53d3d, /* Glow above */
+              0 5px 10px #b53d3d,  /* Glow below */
+              0 0 15px #b53d3d,   /* Larger glow around */
+              0 0 30px #b53d3d;   /* Intense glowing effect */
 }
 
 .bar2 {
   border: none; 
   height: 1px; 
-  background: #1abe0f; /* Bright yellow */
-  box-shadow: 0 -5px 10px #22900c, /* Glow above */
-              0 5px 10px #1abe0f,  /* Glow below */
-              0 0 15px #22900c,   /* Larger glow around */
-              0 0 30px #1abe0f;   /* Intense glowing effect */
+  background: #b53d3d; /* Bright yellow */
+  box-shadow: 0 -5px 10px #b53d3d, /* Glow above */
+              0 5px 10px #D32F2F,  /* Glow below */
+              0 0 15px #b53d3d,   /* Larger glow around */
+              0 0 30px #D32F2F;   /* Intense glowing effect */
   transform: rotate(180deg);
 }
 
@@ -109,15 +109,15 @@
   inset: 0px;
   width: 100%;
   height: 100%;
-  border: 5px #1abe0f;
+  border: 5px #D32F2F;
   padding: 240px; 
   border-radius: 50%; 
   pointer-events: none;
   transform: rotate(225deg) translate(255px) rotate(-225deg);
-  box-shadow: 0 -5px 10px #22900c, /* Glow above */
-              0 5px 10px #22900c,  /* Glow below */
-              0 0 15px #22900c,   /* Larger glow around */
-              0 0 30px #1abe0f;   /* Intense glowing effect */
+  box-shadow: 0 -5px 10px #b53d3d, /* Glow above */
+              0 5px 10px #b53d3d,  /* Glow below */
+              0 0 15px #b53d3d,   /* Larger glow around */
+              0 0 30px #D32F2F;   /* Intense glowing effect */
 }
 
 .item {
@@ -213,15 +213,15 @@
         inset: 0px;
         width: 100%;
         height: 100%;
-        border: 5px #1abe0f;
+        border: 5px #D32F2F;
         padding: 170px; 
         border-radius: 50%; 
         pointer-events: none;
         transform: rotate(225deg) translate(180px) rotate(-225deg);
-        box-shadow: 0 -5px 10px #22900c, /* Glow above */
-              0 5px 10px #22900c,  /* Glow below */
-              0 0 15px #22900c,   /* Larger glow around */
-              0 0 30px #1abe0f;   /* Intense glowing effect */
+        box-shadow: 0 -5px 10px #b53d3d, /* Glow above */
+              0 5px 10px #b53d3d,  /* Glow below */
+              0 0 15px #b53d3d,   /* Larger glow around */
+              0 0 30px #D32F2F;   /* Intense glowing effect */
     }
     .circle-container {
         position: relative;
@@ -272,15 +272,15 @@
         inset: 0px;
         width: 100%;
         height: 100%;
-        border: 5px #1abe0f;
+        border: 5px #D32F2F;
         padding: 190px 105px; 
         border-radius: 30%; 
         pointer-events: none;
         transform: rotate(246deg) translate(155px) rotate(-246deg);
-        box-shadow: 0 -5px 10px #f5c039, /* Glow above */
-              0 5px 10px #f5c039,  /* Glow below */
-              0 0 15px #f5c039,   /* Larger glow around */
-              0 0 30px #1abe0f;   /* Intense glowing effect */
+        box-shadow: 0 -5px 10px #b53d3d, /* Glow above */
+              0 5px 10px #b53d3d,  /* Glow below */
+              0 0 15px #b53d3d,   /* Larger glow around */
+              0 0 30px #D32F2F;   /* Intense glowing effect */
         
     }
     .circle-container {

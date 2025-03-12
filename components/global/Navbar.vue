@@ -51,23 +51,23 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <div :class="navbarClass" class="navbar p-4 flex justify-center items-center  relative">
-        <div class="w-[1300px] flex justify-between items-center">
+    <div :class="navbarClass" class="navbar py-4 px-5 xs:px-10 lg:px-20 flex justify-center items-center relative">
+        <div class="w-full flex justify-between items-center">
             <div>
               <NuxtLink :to="localCode=='pt' ? '/' : '/'+localCode">
                 LOGO
               </NuxtLink>
             </div>
-            <div class="flex justify-center items-center gap-10 font-medium pr-20 text-[13px]">
+            <div class="flex justify-center items-center gap-10 font-medium text-[13px]">
                 <NuxtLink
                 :to="localCode=='pt' ? '/stock' : '/'+localCode+'/stock'" 
-                active-class="border-[#1abe0f] border-t-2"
+                active-class="border-[#b53d3d] text-[#b53d3d] border-t-2"
                 :class="{'border-transparent': !(route.path.endsWith('/stock'))}"
-                class="flex flex-col justify-center gap-1 items-center hover:text-[#1abe0f] border-t-2 transition duration-300 ease-in-out hover:border-[#1abe0f] pt-2">
+                class="flex flex-col justify-center gap-1 items-center hover:text-[#b53d3d] border-t-2 transition duration-300 ease-in-out hover:border-[#b53d3d] pt-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24"><path fill="currentColor" d="M20.515 13.754a.886.886 0 0 1-.88.88h-3.548a.885.885 0 0 1-.88-.88a.886.886 0 0 1 .88-.88h3.548a.89.89 0 0 1 .88.88m-12.376 0a.885.885 0 0 1-.88.88H3.711a.885.885 0 0 1-.88-.88a.886.886 0 0 1 .88-.88h3.548a.886.886 0 0 1 .879.88zm-1.84-8.167h11.404l1.399 3.562l-.069-.004H4.899zm17.68 2.706a1.33 1.33 0 0 0-1.527-1.094l.008-.001l-2.183.356a1 1 0 0 0-.094.026l.005-.002L18.782 4H5.216L3.81 7.578a1 1 0 0 0-.087-.023l-2.185-.357A1.33 1.33 0 0 0 .019 8.286l-.001.008a1.33 1.33 0 0 0 1.088 1.519l.008.001l1.271.209a4.23 4.23 0 0 0-1.3 2.955v6.091h4.4v-2.3h12.429v2.3h4.4v-3.248c.018-.076.028-.163.028-.253v-2.586a4.24 4.24 0 0 0-1.213-2.876l.001.001l1.766-.29a1.33 1.33 0 0 0 1.092-1.527l.001.008z"/></svg>
                     {{ t('stock') }}
                 </NuxtLink>
-                <button @click="scrollToBottom()" class="flex flex-col justify-center gap-1 items-center hover:text-[#1abe0f] transition duration-300 ease-in-out border-t-2 border-transparent hover:border-[#1abe0f] pt-2">
+                <button @click="scrollToBottom()" class="flex flex-col justify-center gap-1 items-center hover:text-[#b53d3d] transition duration-300 ease-in-out border-t-2 border-transparent hover:border-[#b53d3d] pt-2">
                     <i class="fa-solid fa-phone text-[19px] py-[5px]"></i>
                     <span class="text-[12px]">{{ t('contacts') }}</span>
                 </button>
@@ -88,9 +88,9 @@ onBeforeUnmount(() => {
 
 .navbar-scrolled {
   position: sticky;
-  background-color: #0b131a;
+  background-color: #121212 ;
   box-shadow: 0px 10px 30px rgba(255, 255, 255, 0.2);
-  color: #1abe0f;
+  color: white;
 }
 
 .animationEnter {
