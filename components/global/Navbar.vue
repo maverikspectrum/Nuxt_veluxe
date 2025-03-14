@@ -51,11 +51,11 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-    <div :class="navbarClass" class="navbar py-4 px-5 xs:px-10 lg:px-20 flex justify-center items-center relative">
+    <div :class="navbarClass" class="navbar py-4 px-5 xs:px-10 lg:px-20 flex justify-center items-center relative border-t border-[#121212]">
         <div class="w-full flex justify-between items-center">
             <div>
               <NuxtLink :to="localCode=='pt' ? '/' : '/'+localCode">
-                LOGO
+                <img class="w-40" src="public/images/VeluxeAutoLogo.png" alt="Logo Image">
               </NuxtLink>
             </div>
             <div class="flex justify-center items-center gap-10 font-medium text-[13px]">
