@@ -8,7 +8,7 @@ import 'swiper/swiper-bundle.css';
 
 const {t, locale} = useI18n();
 const selectedRange = ref([1990, 2024]);
-const selectedRange2 = ref([10000, 500000]);
+const selectedRange2 = ref([10000, 400000]);
 const selectedRange3 = ref([3000, 50000]); 
 const localCode = useCookie("i18n_redirected");
 
@@ -38,7 +38,7 @@ selectedRange.value[1] = props.maxAno ? props.maxAno : 2024;
 selectedRange3.value[0] = props.minPreco ? props.minPreco : 3000;
 selectedRange3.value[1] = props.maxPreco ? props.maxPreco : 50000;
 selectedRange2.value[0] = props.minKM ? props.minKM : 10000;
-selectedRange2.value[1] = props.maxKM ? props.maxKM : 500000;
+selectedRange2.value[1] = props.maxKM ? props.maxKM : 400000;
 
 const carros = [
   {
@@ -412,7 +412,7 @@ function initializeSliders() {
       connect: true,
       range: {
         min: 10000,
-        max: 500000
+        max: 400000
       },
       step: 1, 
       tooltips: true, 
@@ -550,7 +550,7 @@ const filledCount = computed(() => {
   if (selectedRange3.value[0] !== 3000) count++;
   if (selectedRange3.value[1] !== 50000) count++;
   if (selectedRange2.value[0] !== 10000) count++;
-  if (selectedRange2.value[1] !== 500000) count++;
+  if (selectedRange2.value[1] !== 400000) count++;
 
   return count;
 });
@@ -564,7 +564,7 @@ const resetFilters = () => {
   lugares.value = "";
   selectedRange.value = [1990, 2024];
   selectedRange3.value = [3000, 50000];
-  selectedRange2.value = [10000, 500000];
+  selectedRange2.value = [10000, 400000];
 };
 </script>
 
@@ -836,26 +836,31 @@ const resetFilters = () => {
   }
 }
 
-@keyframes slide-up2 {
-  from {
-    opacity: 1;
-    max-height: 650px;
-  }
-  to {
-    opacity: 0;
-    max-height: 0;
-  }
-}
-
 .disappearSmooth {
   animation: slide-up 1s ease-in-out;
   overflow: hidden;
 }
 
-@media (max-width: 640px) {
-  .disappearSmooth{
-    animation: slide-up2 1s ease-in-out;
-    overflow: hidden;
+@media (max-width: 768px) {
+    @keyframes slide-up {
+    from {
+      opacity: 1;
+      max-height: 750px;
+    }
+    to {
+      opacity: 0;
+      max-height: 0;
+    }
+  };
+  @keyframes slide-down {
+    from {
+      opacity: 0;
+      max-height: 0;
+    }
+    to {
+      opacity: 1;
+      max-height: 750px;
+    }
   }
 }
 #price-slider .noUi-tooltip,

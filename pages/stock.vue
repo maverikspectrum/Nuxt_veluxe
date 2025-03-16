@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
-
+const {t, locale} = useI18n();
+useHead({
+  title: `Veluxe Auto | ${t('stock')}`
+});
 const route = useRoute();
 
 const marca = route.query.marca as string;

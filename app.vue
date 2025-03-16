@@ -1,6 +1,5 @@
 <script setup lang="ts">
 useHead({
-  title: "Veluxe Auto | Showroom",
   link: [
     {
       rel: "icon",
