@@ -17,7 +17,7 @@
                 <div class="dotted-circle"></div>
 
                 <div class="item item0 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
-                    <img class="w-[70px] xs:w-[80px] sm:w-auto" src="" alt="VeluxeAuto Logo">
+                    <img class="w-52" src="public/images/VeluxeAutoLogo.png" alt="Veluxe Auto Logo">
                 </div>
                 <NuxtLink to="/stock?marca=Volkswagen">
                     <div class="moving-element1 item item1 center-item bg-[#201818] shadow-md rounded-full flex justify-center items-center">
@@ -234,8 +234,8 @@
 @media (max-width: 480px) {
     .item0 {
         width: 100px;
-        height: 150px;
-        transform: rotate(265deg) translate(25px) rotate(-265deg);
+        height: 100px;
+        transform: rotate(265deg) translate(10px) rotate(-265deg);
     }
     .item1 {
         transform: rotate(58deg) translate(180px) rotate(-58deg);
