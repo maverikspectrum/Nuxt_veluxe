@@ -349,7 +349,7 @@ function toggleOpenFilters() {
 <template>
   <div class="w-full relative mt-[-120px] bg-[#121212] min-h-[480px]">
       <div v-if="openFilters" class="block h-[925px] md:hidden "></div>
-      <img class="hidden md:block w-full h-[550px]" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/bgHero.jpg" alt="Background Image Hero Section">
+      <img class="hidden md:block w-full h-[550px] object-cover" src="https://dvqnsnzkbesefygzzxrq.supabase.co/storage/v1/object/public/carImages/homePage/bgHero.jpg" alt="Background Image Hero Section">
       <div class="absolute inset-0 top-[130px] md:top-[22%] flex flex-col items-center w-full">
         <div class="bg-[#201818] px-0 lg:px-8 pt-10 pb-6 rounded-xl md:rounded-[100px] items-center justify-center w-full max-w-[300px] md:max-w-[700px] lg:max-w-[900px] test">
           <div class="text-[#D32F2F] flex justify-between items-center px-6 md:px-10 mb-4">
